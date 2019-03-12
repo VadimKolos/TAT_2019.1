@@ -12,12 +12,12 @@ namespace task_DEV1
         {
             try
             {
-                UniqueSymbols uniquesybols = new UniqueSymbols();                
-                uniquesybols.DisplaySubsequence(uniquesybols.SubsequenceFinder(args[0]));
+                SubsequenceSearcher subsequenceSearcher = new SubsequenceSearcher(args[0]);
+                subsequenceSearcher.DisplaySubsequence(subsequenceSearcher.SubsequenceFinder());
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Error" + ex.Message);
+                Console.WriteLine("Error " + ex.Message);
             }
         }
     }
