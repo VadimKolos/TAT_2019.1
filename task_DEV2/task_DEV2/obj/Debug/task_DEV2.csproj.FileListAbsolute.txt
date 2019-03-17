@@ -1,0 +1,7 @@
+D:\cworkspaceTAT2019\task_DEV2\task_DEV2\bin\Debug\task_DEV2.exe.config
+D:\cworkspaceTAT2019\task_DEV2\task_DEV2\bin\Debug\task_DEV2.exe
+D:\cworkspaceTAT2019\task_DEV2\task_DEV2\bin\Debug\task_DEV2.pdb
+D:\cworkspaceTAT2019\task_DEV2\task_DEV2\obj\Debug\task_DEV2.csprojAssemblyReference.cache
+D:\cworkspaceTAT2019\task_DEV2\task_DEV2\obj\Debug\task_DEV2.csproj.CoreCompileInputs.cache
+D:\cworkspaceTAT2019\task_DEV2\task_DEV2\obj\Debug\task_DEV2.exe
+D:\cworkspaceTAT2019\task_DEV2\task_DEV2\obj\Debug\task_DEV2.pdb
