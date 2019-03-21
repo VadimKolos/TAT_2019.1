@@ -11,9 +11,15 @@ namespace task_DEV2
         static void Main(string[] args)
         {
             try
-            {               
+            {
                 PhoneticConverter phoneticConverter = new PhoneticConverter(args[0]);
-                phoneticConverter.PhonemsConverter(args[0], phoneticConverter.ShockVowelSearcher(args[0]));
+                int indexOfShockVowel = phoneticConverter.ShockVowelSearcher(args[0]);
+                string OAconvertedWord = phoneticConverter.OAConverter(args[0], indexOfShockVowel);
+                string softConsonantWord = phoneticConverter.SoftConsonantsConverter(OAconvertedWord);
+                string doubleVoicedVowelWord = phoneticConverter.DoubleSoundVowelsConverter(softConsonantWord);
+                string voicedSoundWord = phoneticConverter.VoicedToDeafConsonantsConverter(doubleVoicedVowelWord);
+                string deafSoundWord = phoneticConverter.DeafToVoicedConsonantsConverter(voicedSoundWord);
+                phoneticConverter.DisplayPhonems(deafSoundWord);
             }
             catch (Exception ex)
             {
