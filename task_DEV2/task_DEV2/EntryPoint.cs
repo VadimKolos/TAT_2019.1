@@ -13,12 +13,12 @@ namespace task_DEV2
             try
             {
                 PhoneticConverter phoneticConverter = new PhoneticConverter(args[0]);
-                int indexOfShockVowel = phoneticConverter.ShockVowelSearcher(args[0]);
-                string OAconvertedWord = phoneticConverter.OAConverter(args[0], indexOfShockVowel);
-                string softConsonantWord = phoneticConverter.SoftConsonantsConverter(OAconvertedWord);
-                string doubleVoicedVowelWord = phoneticConverter.DoubleSoundVowelsConverter(softConsonantWord);
-                string voicedSoundWord = phoneticConverter.VoicedToDeafConsonantsConverter(doubleVoicedVowelWord);
-                string deafSoundWord = phoneticConverter.DeafToVoicedConsonantsConverter(voicedSoundWord);
+                int indexOfShockVowel = phoneticConverter.ShockVowelSearch(args[0]);
+                string OAconvertedWord = phoneticConverter.OAReplace(args[0], indexOfShockVowel);
+                string softConsonantWord = phoneticConverter.SoftConsonantsReplace(OAconvertedWord);
+                string doubleVoicedVowelWord = phoneticConverter.DoubleSoundVowelsReplace(softConsonantWord);
+                string voicedSoundWord = phoneticConverter.VoicedToDeafConsonantsReplace(doubleVoicedVowelWord);
+                string deafSoundWord = phoneticConverter.DeafToVoicedConsonantsReplace(voicedSoundWord);
                 phoneticConverter.DisplayPhonems(deafSoundWord);
             }
             catch (Exception ex)

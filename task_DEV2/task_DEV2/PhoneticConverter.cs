@@ -61,7 +61,7 @@ namespace task_DEV2
         /// </summary>
         /// <param name="inputedWord">inputed string by user</param>
         /// <param name="indexOfShockConst">index of shock vowel</param>
-        public int ShockVowelSearcher(string inputedWord)
+        public int ShockVowelSearch(string inputedWord)
         {
             int indexOfPlus = inputedWord.IndexOf('+');
             indexOfShockVowel = indexOfPlus - 1;
@@ -74,7 +74,7 @@ namespace task_DEV2
         /// <param name="inputedWord">inputed string by user</param>
         /// <param name="indexOfShockConst">index of shock vowel</param>
         /// /// <param name="inputedWord">returns converted word</param>
-        public string OAConverter(string inputedWord, int indexOfShockConst)
+        public string OAReplace(string inputedWord, int indexOfShockConst)
         {
 
             StringBuilder word = new StringBuilder(inputedWord);
@@ -93,9 +93,9 @@ namespace task_DEV2
         /// <summary>
         /// This method is softens consonants before russian letters 'е', 'ё', 'ю', 'я', and view sounds of them.
         /// </summary>
-        /// <param name="inputedWord">inputed string from OAConverter method</param>        
+        /// <param name="inputedWord">inputed string from OAReplace method</param>        
         /// <param name="inputedWord">returns converted word</param>
-        public string SoftConsonantsConverter(string inputedWord)
+        public string SoftConsonantsReplace(string inputedWord)
         {
             StringBuilder word = new StringBuilder(inputedWord);
             string replacedLetter;
@@ -118,9 +118,9 @@ namespace task_DEV2
         /// <summary>
         /// This method is view sound replace letters 'е', 'ё', 'ю', 'я' on phonems of this letters.
         /// </summary>
-        /// <param name="inputedWord">inputed string from SoftConsonantsConverter method</param>        
+        /// <param name="inputedWord">inputed string from SoftConsonantsReplace method</param>        
         /// <param name="inputedWord">returns converted word</param>
-        public string DoubleSoundVowelsConverter(string inputedWord)
+        public string DoubleSoundVowelsReplace(string inputedWord)
         {
             StringBuilder word = new StringBuilder(inputedWord);
             string replacedLetter;
@@ -149,9 +149,9 @@ namespace task_DEV2
         /// <summary>
         /// This method is stuns voiced consonants.
         /// </summary>
-        /// <param name="inputedWord">inputed string from DoubleSoundVowelsConverter method</param>        
+        /// <param name="inputedWord">inputed string from DoubleSoundVowelsReplace method</param>        
         /// <param name="inputedWord">returns converted word</param>
-        public string VoicedToDeafConsonantsConverter(string inputedWord)
+        public string VoicedToDeafConsonantsReplace(string inputedWord)
         {
             StringBuilder word = new StringBuilder(inputedWord);
             string replacedLetter;
@@ -187,9 +187,9 @@ namespace task_DEV2
         /// <summary>
         /// This method is voices deaf consonants.
         /// </summary>
-        /// <param name="inputedWord">inputed string from DoubleSoundVowelsConverter method</param>        
+        /// <param name="inputedWord">inputed string from DoubleSoundVowelsReplace method</param>        
         /// <param name="inputedWord">returns converted word</param>
-        public string DeafToVoicedConsonantsConverter(string inputedWord)
+        public string DeafToVoicedConsonantsReplace(string inputedWord)
         {
             StringBuilder word = new StringBuilder(inputedWord);
             string replacedLetter;
