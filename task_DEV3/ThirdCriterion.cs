@@ -40,9 +40,7 @@ namespace task_DEV3
             int needCountOfMiddles = 0;
             int needCountOfSeniors = 0;
             int needCountOfLeads = 0;
-
             int highQualifiedEmployees = 0;
-
             for (int i = 0; _inputProductivity >= middleProductivity; i++)
             {
                 if (_inputProductivity >= leadProductivity)
