@@ -2,6 +2,9 @@
 
 namespace task_DEV3
 {
+    /// <summary>
+    /// Entry point
+    /// </summary>    
     class EntryPoint
     {
         /// <summary>
@@ -12,7 +15,16 @@ namespace task_DEV3
         {
             try
             {
-                TeamBuilder teamBuilder = new TeamBuilder();
+                if (args[0] == string.Empty || args[1] == string.Empty || args[2] == string.Empty)
+                {
+                    Console.WriteLine("Incorreсt input:  use 3 parametres");
+                    Environment.Exit(1);
+                }
+                else
+                {
+                    TeamBuilder optimizer = new TeamBuilder(args[0], args[1], args[2]);
+                    optimizer.InputDataTake();
+                }
             }
             catch (Exception ex)
             {
