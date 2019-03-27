@@ -50,9 +50,7 @@ namespace task_DEV3
             int needCountOfMiddles = 0;
             int needCountOfSeniors = 0;
             int needCountOfLeads = 0;
-
             int totalProductivity = 0;
-
             for (int i = 0; _inputMoney >= junSalary; i++)
             {
                 if (_inputMoney >= leadSalary)
