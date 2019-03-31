@@ -2,8 +2,8 @@
 {
     interface IFlyable
     {
-        int [] FlyTo(Point newPoint);
+        int[] FlyTo(Point newPoint);
         string WhoAmI();
-        double GetFlyTime(int [] coordinateArray);
+        double GetFlyTime(int[] coordinateArray);
     }
 }

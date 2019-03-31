@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace task_DEV5
 {
@@ -10,7 +6,7 @@ namespace task_DEV5
     {
         public void display(double timeArgument, string flyingObjectName)
         {
-            Console.WriteLine("flight time of " + flyingObjectName + " is: " + timeArgument);
+            Console.WriteLine("flight time of " + flyingObjectName + " is: " + timeArgument + " hours");
         }
     }
 }

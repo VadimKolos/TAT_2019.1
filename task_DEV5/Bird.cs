@@ -7,9 +7,9 @@ namespace task_DEV5
         Point point;
         public int newCoordinateX { get; set; }
         public int newCoordinateY { get; set; }
-        public int newCoordinateZ { get; set; }              
+        public int newCoordinateZ { get; set; }
 
-        public int [] FlyTo(Point newPoint)
+        public int[] FlyTo(Point newPoint)
         {
             newCoordinateX = newPoint.coordinateX;
             newCoordinateY = newPoint.coordinateY;
@@ -23,7 +23,7 @@ namespace task_DEV5
             return "Bird";
         }
 
-        public double GetFlyTime(int [] endPoint)
+        public double GetFlyTime(int[] endPoint)
         {
             Random random = new Random();
             int speed = random.Next(0, 20);

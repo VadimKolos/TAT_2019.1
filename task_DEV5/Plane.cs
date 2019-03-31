@@ -8,8 +8,8 @@ namespace task_DEV5
         public int newCoordinateX { get; set; }
         public int newCoordinateY { get; set; }
         public int newCoordinateZ { get; set; }
-                
-        public int [] FlyTo(Point newPoint)
+
+        public int[] FlyTo(Point newPoint)
         {
             newCoordinateX = newPoint.coordinateX;
             newCoordinateY = newPoint.coordinateY;
@@ -23,7 +23,7 @@ namespace task_DEV5
             return "Plane";
         }
 
-        public double GetFlyTime(int [] endPoint)
+        public double GetFlyTime(int[] endPoint)
         {
             double timeOfFlying = 0;
             var speed = 200;
@@ -36,7 +36,7 @@ namespace task_DEV5
                 speed = speed + 10;
             }
             timeOfFlying += distance / speed;
-            return timeOfFlying;           
+            return timeOfFlying;
         }
     }
 }
