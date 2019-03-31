@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace task_DEV5
+﻿namespace task_DEV5
 {
     public struct Point
     {

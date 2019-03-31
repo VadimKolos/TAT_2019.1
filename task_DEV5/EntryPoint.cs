@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace task_DEV5
 {
@@ -10,12 +7,24 @@ namespace task_DEV5
     {
         static void Main(string[] args)
         {
-            Point point = new Point(0,0,0);
-            var iFly = new List<IFlyable> {new Bird(), new Plane(), new SpaceShip() };
-            foreach (var flyable in iFly)
-            {              
-                flyable.FlyTo(new Point(100, 200, 800));
-            }            
+            try
+            {
+                Screen screen = new Screen();
+                Point point = new Point(0, 0, 0);
+                int[] coordinateArray;
+                var iFly = new List<IFlyable> { new Bird(), new Plane(), new SpaceShip() };
+                foreach (var flyable in iFly)
+                {
+                    coordinateArray = flyable.FlyTo(new Point(100, 200, 800));
+                    double timeArgument = flyable.GetFlyTime(coordinateArray);
+                    string flyingObjectName = flyable.WhoAmI();
+                    screen.display(timeArgument, flyingObjectName);
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error " + ex.Message);
+            }
         }
     }
 }
