@@ -1,7 +1,0 @@
-D:\cworkspaceTAT2019\task_DEV5\task_DEV5\bin\Debug\task_DEV5.exe.config
-D:\cworkspaceTAT2019\task_DEV5\task_DEV5\bin\Debug\task_DEV5.exe
-D:\cworkspaceTAT2019\task_DEV5\task_DEV5\bin\Debug\task_DEV5.pdb
-D:\cworkspaceTAT2019\task_DEV5\task_DEV5\obj\Debug\task_DEV5.csprojAssemblyReference.cache
-D:\cworkspaceTAT2019\task_DEV5\task_DEV5\obj\Debug\task_DEV5.csproj.CoreCompileInputs.cache
-D:\cworkspaceTAT2019\task_DEV5\task_DEV5\obj\Debug\task_DEV5.exe
-D:\cworkspaceTAT2019\task_DEV5\task_DEV5\obj\Debug\task_DEV5.pdb
