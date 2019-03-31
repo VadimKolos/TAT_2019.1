@@ -3,8 +3,14 @@ using System.Collections.Generic;
 
 namespace task_DEV5
 {
+    /// <summary>
+    /// Entry point of the program.
+    /// </summary>
     class EntryPoint
     {
+        /// <summary>
+        /// The main - start program.
+        /// </summary>
         static void Main(string[] args)
         {
             try
