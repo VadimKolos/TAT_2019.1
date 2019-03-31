@@ -9,7 +9,7 @@ namespace task_DEV5
     class EntryPoint
     {
         /// <summary>
-        /// The main - start program.
+        /// The main - start of the program.
         /// </summary>
         static void Main(string[] args)
         {
