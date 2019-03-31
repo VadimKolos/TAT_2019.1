@@ -10,7 +10,7 @@ namespace task_DEV5
         Point point;
 
         /// <summary>
-        /// Final coordinates of plane.
+        /// Final coordinates of space ship.
         /// </summary>
         public int newCoordinateX { get; set; }
         public int newCoordinateY { get; set; }

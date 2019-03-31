@@ -8,6 +8,7 @@ namespace task_DEV5
     class Bird : IFlyable
     {
         Point point;
+
         /// <summary>
         /// Final coordinates of bird.
         /// </summary>
