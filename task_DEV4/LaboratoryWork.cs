@@ -4,13 +4,28 @@ namespace task_DEV4
 {
     class LaboratoryWork : Material
     {
-        public LaboratoryWork(List<string> listQuestions, string listMethodics)
+        string textDescription { get; set; }
+        public LaboratoryWork(string description)
         {
-            this.ListQuestions = listQuestions;
-            this.ListMethodics = listMethodics;
+            textDescription = "Laboratory Work";
         }
-        
-        public List<string> ListQuestions { get; private set; }       
-        public string ListMethodics { get; private set; }
+
+        public override string ToString()
+        {
+            string description = null;
+            if (textDescription.Length > 0 && textDescription.Length < 256)
+            {
+                description = "Laboratory Work";
+            }
+            if (textDescription == "")
+            {
+                description = "empty";
+            }
+            else
+            {
+                description = "null";
+            }
+            return description;
+        }
     }
 }

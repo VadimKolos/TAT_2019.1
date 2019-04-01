@@ -5,13 +5,29 @@ namespace task_DEV4
 {
     class Discipline
     {
-        private readonly Guid id;
-        public List<Tuple<Lecture, Seminar, LaboratoryWork>> DisciplineList { get; private set; }
+        string textDescription { get; set; }
 
         public Discipline()
         {
-            this.id = new Guid();
-            this.DisciplineList = new List<Tuple<Lecture, Seminar, LaboratoryWork>>();
+            textDescription = "descipline";
+        }
+
+        public override string ToString()
+        {
+            string description = null;
+            if (textDescription.Length > 0 && textDescription.Length < 256)
+            {
+                description = "Discipline";
+            }
+            if (textDescription == "")
+            {
+                description = "empty";
+            }
+            else
+            {
+                description = "null";
+            }
+            return description;
         }
     }
 }
