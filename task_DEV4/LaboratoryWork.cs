@@ -1,7 +1,8 @@
-﻿using System.Collections.Generic;
-
-namespace task_DEV4
+﻿namespace task_DEV4
 {
+    /// <summary>
+    /// Class Laboratory Work
+    /// </summary>
     class LaboratoryWork : Material
     {
         string textDescription { get; set; }
@@ -10,6 +11,9 @@ namespace task_DEV4
             textDescription = "Laboratory Work";
         }
 
+        /// <summary>
+        /// This method returns text description of this object
+        /// </summary>
         public override string ToString()
         {
             string description = null;

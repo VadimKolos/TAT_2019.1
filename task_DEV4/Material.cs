@@ -1,10 +1,10 @@
-﻿using System;
-
-namespace task_DEV4
+﻿namespace task_DEV4
 {
+     /// <summary>
+     /// Class Material
+     /// </summary>
      class Material : Discipline
-    {
-        
+    {        
         string textDescription { get; set; }
 
         public string Description()
@@ -13,6 +13,9 @@ namespace task_DEV4
             return textDescription;
         }
 
+        /// <summary>
+        /// This method returns text description of this object
+        /// </summary>
         public override string ToString()
         {
             string description = null;
