@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace task_DEV4
 {
@@ -52,5 +53,13 @@ namespace task_DEV4
             return description;
         }
 
+        /// <summary>
+        /// This method set unique identificator.
+        /// </summary>
+        public Guid SetGuid()
+        {
+            Guid guid = Guid.NewGuid();
+            return guid;
+        }
     }
 }

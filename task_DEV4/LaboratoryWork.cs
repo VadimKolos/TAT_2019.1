@@ -1,4 +1,6 @@
-﻿namespace task_DEV4
+﻿using System;
+
+namespace task_DEV4
 {
     /// <summary>
     /// Class Laboratory Work
@@ -30,6 +32,15 @@
                 description = "null";
             }
             return description;
+        }
+
+        /// <summary>
+        /// This method set unique identificator.
+        /// </summary>
+        public Guid SetGuid()
+        {
+            Guid guid = Guid.NewGuid();
+            return guid;
         }
     }
 }

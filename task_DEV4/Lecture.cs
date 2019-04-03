@@ -1,4 +1,6 @@
-﻿namespace task_DEV4
+﻿using System;
+
+namespace task_DEV4
 {
     /// <summary>
     /// Class Lecture
@@ -72,6 +74,15 @@
                 presentationFormat = "unknown";
             }
             return presentationFormat;
-        }        
+        }
+
+        /// <summary>
+        /// This method set unique identificator.
+        /// </summary>
+        public Guid SetGuid()
+        {
+            Guid guid = Guid.NewGuid();
+            return guid;
+        }
     }
 }

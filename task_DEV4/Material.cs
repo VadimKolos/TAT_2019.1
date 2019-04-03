@@ -1,11 +1,14 @@
-﻿namespace task_DEV4
+﻿using System;
+
+namespace task_DEV4
 {
-     /// <summary>
-     /// Class Material
-     /// </summary>
-     class Material : Discipline
-    {        
+    /// <summary>
+    /// Class Material
+    /// </summary>
+    class Material : Discipline
+    {
         string textDescription { get; set; }
+
 
         public string Description()
         {
@@ -32,6 +35,15 @@
                 description = "null";
             }
             return description;
+        }
+
+        /// <summary>
+        /// This method set unique identificator.
+        /// </summary>
+        public Guid SetGuid()
+        {
+                Guid guid = Guid.NewGuid();
+                return guid;
         }
     }
 }
