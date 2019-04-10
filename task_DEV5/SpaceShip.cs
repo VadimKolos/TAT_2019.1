@@ -28,6 +28,7 @@ namespace task_DEV5
             newCoordinateZ = newPoint.coordinateZ;
 
             int[] endPoint = { newCoordinateX, newCoordinateY, newCoordinateZ };
+            
             return endPoint;
         }
 
@@ -50,6 +51,7 @@ namespace task_DEV5
             int speed = 28800000;
             var timeOfFlying = Math.Sqrt((newCoordinateX - point.coordinateX) ^ 2 + (newCoordinateY - point.coordinateY) ^ 2
                 + (newCoordinateZ - point.coordinateZ) ^ 2) / speed;
+                
             return timeOfFlying;
         }
     }
