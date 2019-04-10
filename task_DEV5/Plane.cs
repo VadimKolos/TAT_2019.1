@@ -27,6 +27,7 @@ namespace task_DEV5
             newCoordinateY = newPoint.coordinateY;
             newCoordinateZ = newPoint.coordinateZ;
             int[] endPoint = { newCoordinateX, newCoordinateY, newCoordinateZ };
+
             return endPoint;
         }
 
@@ -61,6 +62,7 @@ namespace task_DEV5
                 speed = speed + 10;
             }
             timeOfFlying = (timeOfFlying + distance) / speed;
+
             return timeOfFlying;
         }
     }

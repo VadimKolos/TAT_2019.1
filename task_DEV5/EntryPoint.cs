@@ -10,6 +10,8 @@ namespace task_DEV5
     {
         /// <summary>
         /// The main - start program.
+        /// Start point coordinates  - 0, 0, 0.
+        /// End point coordinates  - 100, 200, 800.
         /// </summary>
         static void Main(string[] args)
         {

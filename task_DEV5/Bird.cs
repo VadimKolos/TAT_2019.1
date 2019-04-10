@@ -50,6 +50,7 @@ namespace task_DEV5
             int speed = random.Next(1, 20);
             var timeOfFlying = Math.Sqrt((newCoordinateX - point.coordinateX) ^ 2 + (newCoordinateY - point.coordinateY) ^ 2
                 + (newCoordinateZ - point.coordinateZ)) / speed;
+
             return timeOfFlying;
         }
     }
