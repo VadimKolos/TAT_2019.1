@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{118B7B1F-9ECE-4E95-91CE-CEF441434B3A}</ProjectGuid>
+    <ProjectGuid>{3958886A-52F0-4E59-9F5B-4DA060FDCD27}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>task_DEV5</RootNamespace>
-    <AssemblyName>task_DEV5</AssemblyName>
+    <RootNamespace>task_DEV7</RootNamespace>
+    <AssemblyName>task_DEV7</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,14 +43,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Bird.cs" />
-    <Compile Include="EntryPoint.cs" />
-    <Compile Include="IFlyable.cs" />
-    <Compile Include="Plane.cs" />
-    <Compile Include="Point.cs" />
+    <Compile Include="AveragePrice.cs" />
+    <Compile Include="AveragePriceOfType.cs" />
+    <Compile Include="Car.cs" />
+    <Compile Include="Controller.cs" />
+    <Compile Include="Catalog.cs" />
+    <Compile Include="CountCars.cs" />
+    <Compile Include="CountTypes.cs" />
+    <Compile Include="ICommand.cs" />
+    <Compile Include="Invoker.cs" />
+    <Compile Include="ListFromXMLdataBase.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Screen.cs" />
-    <Compile Include="SpaceShip.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
