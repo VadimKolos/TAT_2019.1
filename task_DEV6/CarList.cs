@@ -13,6 +13,7 @@ namespace Task_DEV5
         /// </summary>
         /// <returns>List of cars</returns>
         public List<Car> listOfCar = new List<Car>();
+
         public List<Car> AddToCarList(Car car, List<Car> listOfCars)
         {
             if (listOfCars.Count == 0)
@@ -40,6 +41,7 @@ namespace Task_DEV5
                     }
                 }
             }
+
             return listOfCar = listOfCars; //return list of cars
         }
     }

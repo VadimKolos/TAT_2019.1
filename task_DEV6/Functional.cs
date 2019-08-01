@@ -47,6 +47,7 @@ namespace Task_DEV5
 
             Console.WriteLine(averagePrice = summOfPrice / countOfCars);
         }
+
         /// <summary>
         /// Method AveragePriceOfType calculates and outputs average price of cars of the same model.
         /// </summary>

@@ -20,6 +20,5 @@ namespace Task_DEV5
                 Console.WriteLine("incorrect path of file");
             }
         }
-
     }
 }
