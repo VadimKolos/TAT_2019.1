@@ -7,13 +7,14 @@ namespace task_DEV1
     /// <summary>
     /// This class works with input sequence.
     /// </summary>
-    class SubsequenceSearcher
+    class SubsequenceSearch
     {
         public string inputedSequence { get; set; }
+
         /// <summary>
         /// This constructor check input sequense.
         /// </summary>
-        public SubsequenceSearcher(string inputedSequence)
+        public SubsequenceSearch(string inputedSequence)
         {
             if (inputedSequence.Length < 2)
             {
@@ -30,7 +31,7 @@ namespace task_DEV1
         /// </summary>
         /// <param name="inputedSequence">input string (sequnce)</param>
         /// <param name="sequences">unique subsequences from input sequence</param>
-        public HashSet<string> SubsequenceFinder()
+        public HashSet<string> SubsequenceFind()
         {
             var subsequences = new HashSet<string>();
             for (int index = 0; index < inputedSequence.Length - 1; index++)

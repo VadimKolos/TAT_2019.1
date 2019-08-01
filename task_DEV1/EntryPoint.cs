@@ -2,6 +2,9 @@
 
 namespace task_DEV1
 {
+    /// <summary>
+    /// This program search unique subsequences from input string
+    /// </summary>
     class EntryPoint
     {
         /// <summary>
@@ -12,8 +15,8 @@ namespace task_DEV1
         {
             try
             {
-                SubsequenceSearcher subsequenceSearcher = new SubsequenceSearcher(args[0]);
-                subsequenceSearcher.DisplaySubsequence(subsequenceSearcher.SubsequenceFinder());
+                SubsequenceSearch subsequenceSearcher = new SubsequenceSearch(args[0]);
+                subsequenceSearcher.DisplaySubsequence(subsequenceSearcher.SubsequenceFind());
             }
             catch (Exception ex)
             {
@@ -22,4 +25,3 @@ namespace task_DEV1
         }
     }
 }
-
