@@ -20,8 +20,7 @@ namespace task_DEV7
         {
             this.carList = carList;
         }
-
-
+        
         /// <summary>
         /// Method for count types of cars.
         /// </summary>
@@ -29,6 +28,7 @@ namespace task_DEV7
         public string CountTypes()
         {
             int countMarks = carList.Count;
+
             return countMarks.ToString();
         }
 
@@ -43,6 +43,7 @@ namespace task_DEV7
             {
                 countCars += car.quantity;
             }
+
             return countCars.ToString();
         }
 
@@ -54,11 +55,13 @@ namespace task_DEV7
         {
             decimal summOfPrice = 0;
             int countOfCars = 0;
+
             foreach (Car car in carList)
             {
                 summOfPrice += car.price * car.quantity;
                 countOfCars += car.quantity;
             }
+
             return (summOfPrice / countOfCars).ToString();
         }
 
