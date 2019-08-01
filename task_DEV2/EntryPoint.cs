@@ -2,6 +2,10 @@
 
 namespace task_DEV2
 {
+    /// <summary>
+    /// This program takes a sequence of Russian characters and converts them 
+    /// into a phonetic representation.
+    /// </summary>
     class EntryPoint
     {
         /// <summary>

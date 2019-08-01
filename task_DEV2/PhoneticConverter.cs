@@ -9,7 +9,6 @@ namespace task_DEV2
     /// <summary>
     /// This class make sound presentation from inputed string. 
     /// </summary>
-
     class PhoneticConverter
     {
         /// <summary>
@@ -34,20 +33,20 @@ namespace task_DEV2
 
         public string inputedWord { get; set; }
         public int indexOfShockVowel { get; set; }
+
+        /// <summary>
+        /// This constructor check input string.
+        /// </summary>
         /// <summary>
         /// This constructor check input string.
         /// </summary>
         public PhoneticConverter(string inputedWord)
         {
-            if (inputedWord.Length < 1)
+            if (inputedWord.Length < 1 || Regex.IsMatch(inputedWord, @"[А-ЯЁ]") || !inputedWord.Contains("+")
+                || Regex.IsMatch(inputedWord, @"[A-Z]") || Regex.IsMatch(inputedWord, @"[a-z]") || Regex.IsMatch(inputedWord, @"[0-9]"))
             {
                 this.inputedWord = string.Empty;
                 Console.WriteLine("Incorrect input");
-            }
-            if (Regex.IsMatch(inputedWord, @"[А-ЯЁ]"))
-            {
-                this.inputedWord = string.Empty;
-                Console.WriteLine("Incorreсt input: use only lowercase letters");
                 Environment.Exit(1);
             }
             else
@@ -76,7 +75,6 @@ namespace task_DEV2
         /// /// <param name="inputedWord">returns converted word</param>
         public string OAReplace(string inputedWord, int indexOfShockConst)
         {
-
             StringBuilder word = new StringBuilder(inputedWord);
             char letterA = 'а';
             for (int i = 0; i < word.Length; i++)
@@ -212,6 +210,7 @@ namespace task_DEV2
             inputedWord = word.ToString();
             return inputedWord;
         }
+
         /// <summary>
         /// This method displays subseqences. 
         /// </summary>
