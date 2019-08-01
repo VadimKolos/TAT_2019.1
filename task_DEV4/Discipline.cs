@@ -1,47 +1,54 @@
-﻿using System;
+﻿using System.Collections.Generic;
 
 namespace task_DEV4
 {
     /// <summary>
-    /// Class Discipline
+    /// This class corresponds to the training discipline.
     /// </summary>
-    class Discipline
+    class Discipline : EntityInfo
     {
-        string textDescription { get; set; }
+        List<Lecture> lectures = new List<Lecture>();
 
-        public Discipline()
+        /// <summary>
+        /// This constructor sets the text decsription and GUID.
+        /// </summary>
+        /// <param name="disciplineName">Name of the training discipline</param>
+        public Discipline(string disciplineName = "TrainingSubject")
         {
-            textDescription = "descipline";
+            TextDescription = disciplineName;
+            GUID.SetGUID(this);
         }
 
         /// <summary>
-        /// This method returns text description of this object
+        /// This indexator returns list with lecture by index and the corresponding seminars and labs.
         /// </summary>
-        public override string ToString()
+        /// <param name="index">index of the lecture</param>
+        /// <returns>List with lecture and the corresponding seminars and labs</returns>
+        public List<Lesson> this[int index]
         {
-            string description = null;
-            if (textDescription.Length > 0 && textDescription.Length < 256)
+            get
             {
-                description = "Discipline";
+                List<Lesson> lessonsForLecture = new List<Lesson>();
+                lessonsForLecture.Add(lectures[index]);
+                foreach (Seminar seminar in lectures[index].seminars)
+                {
+                    lessonsForLecture.Add(seminar);
+                }
+                foreach (LabLesson labLesson in lectures[index].labs)
+                {
+                    lessonsForLecture.Add(labLesson);
+                }
+                return lessonsForLecture;
             }
-            if (textDescription == "")
-            {
-                description = "empty";
-            }
-            else
-            {
-                description = "null";
-            }
-            return description;
         }
 
         /// <summary>
-        /// This method set unique identificator.
+        /// This method adds the lecture to the discipline list of the lectures.
         /// </summary>
-        public Guid SetGuid()
+        /// <param name="lectureNumber">Lecture number that is added</param>
+        public void AddLecture(int lectureNumber)
         {
-            Guid guid = Guid.NewGuid();
-            return guid;
+            lectures.Add(new Lecture(lectureNumber));
         }
     }
 }

@@ -3,43 +3,28 @@
 namespace task_DEV4
 {
     /// <summary>
-    /// Entry point
+    /// This class is entry point of the programm.
     /// </summary>
-    /// <param name="args">Arguments from command line</param>
     class EntryPoint
-    {       
+    {
+        /// <summary>
+        /// This method creates a new discipline.
+        /// </summary>
+        /// <param name="args">Arguments of the programm.</param>
         static void Main(string[] args)
         {
             try
             {
-                Discipline discipline = new Discipline();
-                discipline.ToString();
-                discipline.SetGuid();
-
-                Material material = new Material();
-                material.ToString();
-                material.Description();
-                material.SetGuid();
-
-                Lecture lecture = new Lecture();
-                lecture.LectureTextCheck("Lecture text");
-                lecture.ToString();
-                lecture.GetPresentationFormat("PDF");
-                lecture.SetGuid();
-
-                Seminar seminar = new Seminar(1, "task1", "question1", "answer1", "seminar");
-                seminar.ToString();
-                seminar.Description();
-                seminar.SetGuid();
-
-                LaboratoryWork laboratoryWork = new LaboratoryWork("Laboratory work");
-                laboratoryWork.ToString();
-                laboratoryWork.Description();
-                laboratoryWork.SetGuid();
+                var discipline = new Discipline("Physics");
+                discipline.AddLecture(1);
             }
-            catch (Exception ex)
+            catch (FormatException ex)
             {
-                Console.WriteLine("Error " + ex.Message);
+                Console.WriteLine(ex.Message);
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("Something wrong!");
             }
         }
     }

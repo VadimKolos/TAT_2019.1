@@ -1,65 +1,27 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace task_DEV4
 {
     /// <summary>
-    /// Class Seminar
+    /// This class corresponds to the seminar lesson.
     /// </summary>
-    class Seminar : Material
+    class Seminar : Lesson
     {
-        string textDescription { get; set; }
-
-        Dictionary<string, string> controlQuestions = new Dictionary<string, string>();
+        Dictionary<string, string> questionAnswer = new Dictionary<string, string>();
 
         /// <summary>
-        /// This method add control questions.
+        /// This constructor initializes the text description and GUID and fills the dictionary with questions and answers.
         /// </summary>
-        /// <param name="countOfQuestions">count of questions</param>
-        /// <param name="task">task in seminar</param>
-        /// <param name="question">control question</param>
-        /// <param name="answer">Right answer on control question</param>
-        public Seminar(int countOfQuestions, string task, string question, string answer, string description )
+        /// <param name="seminarNumber">Number of the seminar</param>
+        /// <param name="questionAmount">Amount of the questions</param>
+        public Seminar(int seminarNumber, int questionAmount = 5)
         {
-            textDescription = description;
-            var tasks = new HashSet<string>();
-
-            while (countOfQuestions >= 1)
+            TextDescription = "Seminar " + seminarNumber;
+            for (int i = 1; i <= questionAmount; i++)
             {
-                controlQuestions.Add(question, answer);
-                tasks.Add(task);
-                countOfQuestions--;
+                questionAnswer.Add("Question " + i, "Answer " + i);
             }
-        }
-
-        /// <summary>
-        /// This method returns text description of this object
-        /// </summary>
-        public override string ToString()
-        {
-            string description = null;
-            if (textDescription.Length > 0 && textDescription.Length < 256)
-            {
-                description = "Seminar";
-            }
-            if (textDescription == "")
-            {
-                description = "empty";
-            }
-            else
-            {
-                description = "null";
-            }
-            return description;
-        }
-
-        /// <summary>
-        /// This method set unique identificator.
-        /// </summary>
-        public Guid SetGuid()
-        {
-            Guid guid = Guid.NewGuid();
-            return guid;
+            GUID.SetGUID(this);
         }
     }
 }

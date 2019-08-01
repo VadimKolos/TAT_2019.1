@@ -1,88 +1,100 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace task_DEV4
 {
     /// <summary>
-    /// Class Lecture
+    /// This class corresponds to the lecture lesson.
     /// </summary>
-    class Lecture : Material
+    class Lecture : Lesson
     {
-        private string lectureText;
-        private string presentationFormat;
-        string textDescription { get; set; }
-        string text { get; set; }
-        string URIContent { get; set; }
+        public List<Seminar> seminars = new List<Seminar>();
+        public List<LabLesson> labs = new List<LabLesson>();
+        string ContentURI { get; set; }
+        private string _lectureText;
+        private string _formatPresention;
 
-        public Lecture()
+        public string LectureText
         {
-            textDescription = "Lecture";
-            text = "Lecture Text";
+            get
+            {
+                return _lectureText;
+            }
+            set
+            {
+                if (value.Length > 100000)
+                {
+                    throw new FormatException("Lecture text length > 100000");
+                }
+                _lectureText = value;
+            }
+        }
+
+        public string FormatPresentation
+        {
+            get
+            {
+                return _formatPresention;
+            }
+            set
+            {
+                switch (value)
+                {
+                    case "PPT":
+                        _formatPresention = "PPT";
+                        break;
+                    case "PDF":
+                        _formatPresention = "PDF";
+                        break;
+                    default:
+                        _formatPresention = "Unknown";
+                        break;
+                }
+            }
         }
 
         /// <summary>
-        /// This method returns text description of this object
+        /// This constructor inicialize contenr URI, lecture text, GUID.
+        /// And inicialize text description of the lecture by lecture number. 
         /// </summary>
-        public override string ToString()
+        /// <param name="lectureNumber">Number of the lecture</param>
+        public Lecture(int lectureNumber)
         {
-            string description = null;
-            if (textDescription.Length > 0 && textDescription.Length < 256)
-            {
-                description = "Lecture";
-            }
-            if (textDescription == "")
-            {
-                description = "empty";
-            }
-            else
-            {
-                description = "null";
-            }
-            return description;
+            TextDescription = "Lecture " + lectureNumber;
+            ContentURI = "Some content URI";
+            LectureText = "Some Text";
+            GUID.SetGUID(this);
         }
 
         /// <summary>
-        /// This method check length of lecture text (maximum length 10000 symbols) 
+        /// This constructor inicialize contenr URI, lecture text, GUID.
+        /// And inicialize text description of the lecture by lecture name. 
         /// </summary>
-        public string LectureTextCheck(string text)
+        /// <param name="lectureName">Name of the lecture</param>
+        public Lecture(string lectureName)
         {
-            if (text.Length <= 100000)
-            {
-                lectureText = text;
-            }
-            else
-            {
-                lectureText = string.Empty;
-            }
-            return lectureText;
+            TextDescription = lectureName;
+            ContentURI = "Some content URI";
+            LectureText = "Some Text";
+            GUID.SetGUID(this);
         }
 
         /// <summary>
-        /// This method get presentation format 
+        /// This method adds the seminar to the lecture list of the seminars.
         /// </summary>
-        public string GetPresentationFormat(string format)
+        /// <param name="seminarNumber">Number of the seminar</param>
+        public void AddSeminar(int seminarNumber)
         {
-            if (format == "PPT")
-            {
-                presentationFormat = "PPT";
-            }
-            if (format == "PDF")
-            {
-                presentationFormat = "PDF";
-            }
-            else
-            {
-                presentationFormat = "unknown";
-            }
-            return presentationFormat;
+            seminars.Add(new Seminar(seminarNumber));
         }
 
         /// <summary>
-        /// This method set unique identificator.
+        /// This method adds the lab lesson to the lecture list of the lab lessons.
         /// </summary>
-        public Guid SetGuid()
+        /// <param name="labLessonNumber">Number of the lab lesson</param>
+        public void AddLabLesson(int labLessonNumber)
         {
-            Guid guid = Guid.NewGuid();
-            return guid;
+            labs.Add(new LabLesson(labLessonNumber));
         }
     }
 }
