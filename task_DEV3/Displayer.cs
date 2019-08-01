@@ -2,7 +2,10 @@
 
 namespace task_DEV3
 {
-    class Display
+    /// <summary>
+    /// This class shows information about employee by criterion.
+    /// </summary>
+    public class Displayer
     {
         public void ShowFirstCriterion(int[] employeeArray)
         {

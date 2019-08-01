@@ -5,34 +5,34 @@ namespace task_DEV3
     /// <summary>
     /// This class create a team be the third criterion. 
     /// </summary>
-    class ThirdCriterion
+    public class ThirdCriterion
     {
-        Junior constJuniorParams;
-        Middle constMiddleParams;
-        Senior constSeniorParams;
-        Lead constLeadParams;
+        Junior constantJuniorParams;
+        Middle constantMiddleParams;
+        Senior constantSeniorParams;
+        Lead constantLeadParams;
 
         public ThirdCriterion()
         {
-            constJuniorParams = new Junior();
-            constMiddleParams = new Middle();
-            constSeniorParams = new Senior();
-            constLeadParams = new Lead();
+            constantJuniorParams = new Junior();
+            constantMiddleParams = new Middle();
+            constantSeniorParams = new Senior();
+            constantLeadParams = new Lead();
         }
 
         /// <summary>
         /// This method create a team by the third criterion.
         /// </summary>        
-        /// <param name="_inputProductivity">value of productivity which user was inputed</param>
+        /// <param name="inputProductivity">value of productivity which user was inputed</param>
         /// <param name="employeesArray">array of values about created team and total and count of high qualified employees</param>
-        public int[] MinQuantityCalculate(int _inputProductivity)
+        public int[] MinQuantityCalculate(int inputProductivity)
         {
             /// <summary>
             /// Take productivity of each employee.
             /// </summary>
-            int middleProductivity = constMiddleParams.Productivity;
-            int seniorProductivity = constSeniorParams.Productivity;
-            int leadProductivity = constLeadParams.Productivity;
+            int middleProductivity = constantMiddleParams.Productivity;
+            int seniorProductivity = constantSeniorParams.Productivity;
+            int leadProductivity = constantLeadParams.Productivity;
 
             /// <summary>
             /// Start values of count of employee.
@@ -43,24 +43,24 @@ namespace task_DEV3
 
             int highQualifiedEmployees = 0;
 
-            for (int i = 0; _inputProductivity >= middleProductivity; i++)
+            for (int i = 0; inputProductivity >= middleProductivity; i++)
             {
-                if (_inputProductivity >= leadProductivity)
+                if (inputProductivity >= leadProductivity)
                 {
                     highQualifiedEmployees++;
-                    _inputProductivity = _inputProductivity - leadProductivity;
+                    inputProductivity = inputProductivity - leadProductivity;
                     needCountOfLeads++;
                 }
-                else if (_inputProductivity >= seniorProductivity && _inputProductivity < leadProductivity)
+                else if (inputProductivity >= seniorProductivity && inputProductivity < leadProductivity)
                 {
                     highQualifiedEmployees++;
-                    _inputProductivity = _inputProductivity - seniorProductivity;
+                    inputProductivity = inputProductivity - seniorProductivity;
                     needCountOfSeniors++;
                 }
-                else if (_inputProductivity >= middleProductivity && _inputProductivity < seniorProductivity)
+                else if (inputProductivity >= middleProductivity && inputProductivity < seniorProductivity)
                 {
                     highQualifiedEmployees++;
-                    _inputProductivity = _inputProductivity - middleProductivity;
+                    inputProductivity = inputProductivity - middleProductivity;
                     needCountOfMiddles++;
                 }
                 else

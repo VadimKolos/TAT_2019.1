@@ -5,7 +5,7 @@ namespace task_DEV3
     /// <summary>
     /// This class work with input params and choose a criterion.
     /// </summary>
-    class TeamBuilder
+    public class TeamBuilder
     {
         public int _salary { get; set; }
         public int _productivity { get; set; }
@@ -14,7 +14,7 @@ namespace task_DEV3
         FirstCriterion firstCriterion = new FirstCriterion();
         SecondCriterion secondCriterion = new SecondCriterion();
         ThirdCriterion thirdCriterion = new ThirdCriterion();
-        Display display = new Display();
+        Displayer display = new Displayer();
 
         public TeamBuilder(string salary, string productivity, string criterion)
         {

@@ -5,43 +5,43 @@ namespace task_DEV3
     /// <summary>
     /// This class create a team be the second criterion. 
     /// </summary>
-    class SecondCriterion
+    public class SecondCriterion
     {
-        Junior constJuniorParams;
-        Middle constMiddleParams;
-        Senior constSeniorParams;
-        Lead constLeadParams;
+        Junior constantJuniorParams;
+        Middle constantMiddleParams;
+        Senior constantSeniorParams;
+        Lead constantLeadParams;
 
         public SecondCriterion()
         {
-            constJuniorParams = new Junior();
-            constMiddleParams = new Middle();
-            constSeniorParams = new Senior();
-            constLeadParams = new Lead();
+            constantJuniorParams = new Junior();
+            constantMiddleParams = new Middle();
+            constantSeniorParams = new Senior();
+            constantLeadParams = new Lead();
         }
 
         /// <summary>
         /// This method create a team by the second criterion.
         /// </summary>        
-        /// <param name="_inputProductivity">value of productivity which user was inputed</param>
+        /// <param name="inputProductivity">value of productivity which user was inputed</param>
         /// <param name="employeesArray">array of values about created team and total Salary</param>
-        public int[] MinSalaryCalculate(int _inputProductivity)
+        public int[] MinSalaryCalculate(int inputProductivity)
         {
             /// <summary>
             /// Take salary of each employee.
             /// </summary>
-            int junSalary = constJuniorParams.Salary;
-            int middleSalary = constMiddleParams.Salary;
-            int seniorSalary = constSeniorParams.Salary;
-            int leadSalary = constLeadParams.Salary;
+            int junSalary = constantJuniorParams.Salary;
+            int middleSalary = constantMiddleParams.Salary;
+            int seniorSalary = constantSeniorParams.Salary;
+            int leadSalary = constantLeadParams.Salary;
 
             /// <summary>
             /// Take productivity of each employee.
             /// </summary>
-            int junProductivity = constJuniorParams.Productivity;
-            int middleProductivity = constMiddleParams.Productivity;
-            int seniorProductivity = constSeniorParams.Productivity;
-            int leadProductivity = constLeadParams.Productivity;
+            int junProductivity = constantJuniorParams.Productivity;
+            int middleProductivity = constantMiddleParams.Productivity;
+            int seniorProductivity = constantSeniorParams.Productivity;
+            int leadProductivity = constantLeadParams.Productivity;
 
             /// <summary>
             /// Start values of count of employee.
@@ -54,30 +54,30 @@ namespace task_DEV3
 
             int totalSalary = 0;
 
-            for (int i = 0; _inputProductivity >= junProductivity; i++)
+            for (int i = 0; inputProductivity >= junProductivity; i++)
             {
-                if (_inputProductivity >= leadProductivity)
+                if (inputProductivity >= leadProductivity)
                 {
                     totalSalary = totalSalary + leadSalary;
-                    _inputProductivity = _inputProductivity - leadProductivity;
+                    inputProductivity = inputProductivity - leadProductivity;
                     needCountOfLeads++;
                 }
-                else if (_inputProductivity >= seniorProductivity && _inputProductivity < leadProductivity)
+                else if (inputProductivity >= seniorProductivity && inputProductivity < leadProductivity)
                 {
                     totalSalary = totalSalary + seniorSalary;
-                    _inputProductivity = _inputProductivity - seniorProductivity;
+                    inputProductivity = inputProductivity - seniorProductivity;
                     needCountOfSeniors++;
                 }
-                else if (_inputProductivity >= middleProductivity && _inputProductivity < seniorProductivity)
+                else if (inputProductivity >= middleProductivity && inputProductivity < seniorProductivity)
                 {
                     totalSalary = totalSalary + middleSalary;
-                    _inputProductivity = _inputProductivity - middleProductivity;
+                    inputProductivity = inputProductivity - middleProductivity;
                     needCountOfMiddles++;
                 }
-                else if (_inputProductivity >= junProductivity && _inputProductivity < middleProductivity)
+                else if (inputProductivity >= junProductivity && inputProductivity < middleProductivity)
                 {
                     totalSalary = totalSalary + junSalary;
-                    _inputProductivity = _inputProductivity - junProductivity;
+                    inputProductivity = inputProductivity - junProductivity;
                     needCountOfJuns++;
                 }
                 else
