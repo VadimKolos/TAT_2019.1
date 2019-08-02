@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<cars>
+  
+  <car>
+ 
+    <brand>BMW</brand>
+  
+    <model>X5</model>
+
+    <quantity>2</quantity>
+
+    <price>20000</price>
+
+  </car>
+
+  <car>
+
+    <brand>UAZ</brand>
+
+    <model>X6</model>
+
+    <quantity>5</quantity>
+
+    <price>1200</price>
+
+  </car>
+
+
+
+</cars>
