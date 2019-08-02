@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{02AE11AF-4A43-4DBB-82E0-44C370F58964}</ProjectGuid>
+    <ProjectGuid>{16B34393-7413-4AB0-B07B-95042B4B90C0}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>task_DEV2</RootNamespace>
-    <AssemblyName>task_DEV2</AssemblyName>
+    <RootNamespace>taskDEV3</RootNamespace>
+    <AssemblyName>taskDEV3</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,9 +43,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DisplayerScreen.cs" />
+    <Compile Include="Employee.cs" />
     <Compile Include="EntryPoint.cs" />
-    <Compile Include="PhoneticConverter.cs" />
+    <Compile Include="ProductivityCriterion.cs" />
+    <Compile Include="Junior.cs" />
+    <Compile Include="Lead.cs" />
+    <Compile Include="Middle.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SalaryCriterion.cs" />
+    <Compile Include="Senior.cs" />
+    <Compile Include="TeamCreator.cs" />
+    <Compile Include="quantityEmployeeCriterion.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
