@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?> task_DEV7
 <cars>
   <car>
     <brand>BMW</brand>
@@ -30,4 +30,5 @@
     <quantity>97</quantity>
     <price>1000</price>
   </car>
+ master
 </cars>
